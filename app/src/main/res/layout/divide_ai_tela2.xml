@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAF8FF"
+    tools:context=".DivideAi_tela_2">
+
+    <!-- ÍCONE DO TOPO -->
+
+    <ImageView
+        android:id="@+id/imgResumo"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="56dp"
+        android:contentDescription="Resumo da conta"
+        android:src="@drawable/ic_carteira_roxa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!-- TÍTULO -->
+
+    <TextView
+        android:id="@+id/txtTituloResumo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Resumo da conta"
+        android:textColor="#512DA8"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgResumo" />
+
+
+    <!-- CARD DO RESUMO -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cardResumo"
+        android:layout_width="0dp"
+        android:layout_height="190dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/edittext_borda"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTituloResumo">
+
+
+        <!-- VALOR DA CONTA -->
+
+        <TextView
+            android:id="@+id/txtLabelValorConta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Valor da conta"
+            android:textColor="#222222"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtResultadoValorConta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R$ 250,00"
+            android:textColor="#222222"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txtLabelValorConta" />
+
+
+        <!-- GORJETA -->
+
+        <TextView
+            android:id="@+id/txtLabelGorjeta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Gorjeta (10%)"
+            android:textColor="#512DA8"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtLabelValorConta" />
+
+        <TextView
+            android:id="@+id/txtResultadoGorjeta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R$ 25,00"
+            android:textColor="#512DA8"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txtLabelGorjeta" />
+
+
+        <!-- LINHA -->
+
+        <View
+            android:id="@+id/linhaResumo"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:background="#DDD6EE"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtLabelGorjeta" />
+
+
+        <!-- TOTAL -->
+
+        <TextView
+            android:id="@+id/txtLabelTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Total"
+            android:textColor="#111111"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linhaResumo" />
+
+        <TextView
+            android:id="@+id/txtResultadoTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R$ 275,00"
+            android:textColor="#512DA8"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txtLabelTotal" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!-- CARD CADA PESSOA -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cardCadaPessoa"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        android:background="#EEE7FF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardResumo">
+
+
+        <ImageView
+            android:id="@+id/imgPessoasResultado"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="14dp"
+            android:src="@drawable/ic_pessoas_divide_ai"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/txtCadaPessoa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Cada pessoa paga"
+            android:textColor="#512DA8"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgPessoasResultado" />
+
+
+        <TextView
+            android:id="@+id/txtResultadoCadaPessoa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="R$ 68,75"
+            android:textColor="#512DA8"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtCadaPessoa" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!-- NOVO CÁLCULO -->
+
+    <Button
+        android:id="@+id/btnNovoCalculo"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="#512DA8"
+        android:text="NOVO CÁLCULO"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardCadaPessoa" />
+
+
+    <!-- DICA -->
+
+    <TextView
+        android:id="@+id/txtDica"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        android:background="#F0EBFA"
+        android:padding="14dp"
+        android:text="💡  Dica: Verifique sempre os valores antes de finalizar."
+        android:textColor="#512DA8"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnNovoCalculo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
