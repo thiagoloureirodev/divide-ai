@@ -16,3 +16,13 @@ Aplicativo Android para divisão de contas entre pessoas e cálculo de gorjetas.
 - Android Studio
 - XML
 - Activities e Intents
+
+- ## 📸 Screenshots
+
+### Tela inicial
+
+<img src="tela-inicial.png" width="300">
+
+### Tela de resultado
+
+<img src="tela-resultado.png" width="300">
